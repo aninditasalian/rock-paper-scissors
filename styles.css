@@ -4,6 +4,8 @@ body {
     display: flex;
     justify-content: center;
     font-family: 'Silkscreen', cursive;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
 h1 {
@@ -14,10 +16,12 @@ h1 {
     background-color: pink;
     border-radius: 20px;
     padding: 10px;
-    margin: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     width: 600px;
     box-shadow: 5px 5px 10px gray;
 }
+
 
 .cards div {
     background-color: white;

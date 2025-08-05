@@ -1,0 +1,47 @@
+body {
+    background-color: #FFE6E6;
+    font-size:x-large;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background-color: pink;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    width: 600px;
+}
+
+.cards div {
+    background-color: white;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.cards .score {
+    display: flex;
+    justify-content: space-around;
+}
+
+.score div {
+    background-color: #FFE6E6;
+}
+
+
+h1,
+.choice,
+.winner,
+.rps {
+    text-align: center;
+}
+
+button {
+    background-color: #FFE6E6;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: x-large;
+    margin: 10px 20px;
+}
+

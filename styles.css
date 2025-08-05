@@ -45,12 +45,32 @@ h1,
 
 button {
     background-color: #FFE6E6;
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 10px;
-    font-size: x-large;
-    margin: 10px 20px;
+    font-size:xx-large;
+    margin: 10px 10px 20px 10px;
     font-family: 'Silkscreen', cursive;
+    cursor: pointer;
     border: none;
+    transition: background-color 0.3s ease;
 }
+
+button:hover {
+    background-color: #f8cbcb;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+button:active {
+ box-shadow: none;
+ transform: translateY(0);
+}
+
+button:disabled {
+    pointer-events: none;
+}
+
+
+
 
 

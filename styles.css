@@ -43,7 +43,7 @@ h1,
     text-align: center;
 }
 
-button {
+.rps button {
     background-color: #FFE6E6;
     border-radius: 15px;
     padding: 10px;
@@ -53,21 +53,43 @@ button {
     cursor: pointer;
     border: none;
     transition: background-color 0.3s ease;
+    width: 200px;
 }
 
-button:hover {
+.rps button:hover {
     background-color: #f8cbcb;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transform: translateY(-2px);
 }
 
-button:active {
- box-shadow: none;
- transform: translateY(0);
+.resetButton:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
 }
+
+.rps button:active,
+.resetButton:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
 
 button:disabled {
     pointer-events: none;
+}
+
+.reset {
+    text-align: center;
+}
+
+.resetButton {
+    margin-bottom: 5px;
+    font-family: 'Silkscreen', cursive;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    font-size: x-large;
 }
 
 

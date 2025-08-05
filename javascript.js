@@ -9,6 +9,9 @@ const rock = document.querySelector(".rock");
 const paper = document.querySelector(".paper");
 const scissors = document.querySelector(".scissors");
 
+const reset = document.querySelector(".resetButton");
+reset.addEventListener("click", resetGame);
+
 const humanScoreText = document.querySelector(".humanScore");
 const compScoreText = document.querySelector(".compScore");
 
@@ -23,7 +26,7 @@ function playRound(humanChoice, computerChoice) {
 
     compChoiceText.textContent = `My choice: ${computerChoice}`;     
     humanChoiceText.textContent = `Your choice: ${humanChoice}`;
-    
+
     if (computerChoice == "rock") {
         if (humanChoice == "rock") {
             console.log("Tie");
@@ -112,3 +115,15 @@ function disableButtons() {
 }
 
 
+function resetGame() {
+    humanScore = 0;
+    computerScore = 0;
+    humanScoreText.textContent = `You: ${humanScore}`;
+    compScoreText.textContent = `Me: ${computerScore}`;
+    winnerText.textContent = "Choose your weapon!"
+    compChoiceText.textContent = `My choice:`;     
+    humanChoiceText.textContent = `Your choice:`;
+    rock.disabled = false;
+    paper.disabled = false;
+    scissors.disabled = false;
+}

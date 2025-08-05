@@ -12,39 +12,18 @@ const scissors = document.querySelector(".scissors");
 const humanScoreText = document.querySelector(".humanScore");
 const compScoreText = document.querySelector(".compScore");
 
-const choices = document.querySelector(".choice");
+const compChoiceText = document.querySelector(".compChoice");
+const humanChoiceText = document.querySelector(".humanChoice");
 const winnerText = document.querySelector(".winner");
-
-
-
-rock.addEventListener("click", (e) => {
-    let humanChoice = "rock";
-    let computerChoice = getComputerChoice()
-    playRound(humanChoice, computerChoice);
-})
-
-paper.addEventListener("click", (e) => {
-    let humanChoice = "paper";
-    let computerChoice = getComputerChoice()
-    playRound(humanChoice, computerChoice);
-})
-
-scissors.addEventListener("click", (e) => {
-    let humanChoice = "scissors";
-    let computerChoice = getComputerChoice()
-    playRound(humanChoice, computerChoice);
-})
-
 
 let humanScore = 0;
 let computerScore = 0;  
 
-
-
 function playRound(humanChoice, computerChoice) {
 
-    choices.textContent = `My choice: ${computerChoice} Your choice: ${humanChoice}`;     
-
+    compChoiceText.textContent = `My choice: ${computerChoice}`;     
+    humanChoiceText.textContent = `Your choice: ${humanChoice}`;
+    
     if (computerChoice == "rock") {
         if (humanChoice == "rock") {
             console.log("Tie");
@@ -94,8 +73,42 @@ function playRound(humanChoice, computerChoice) {
         }
     }
     console.log("human: ", humanScore, "computer: ", computerScore);
+
+    if (humanScore === 3) {
+        winnerText.textContent = "You win the game!";
+        disableButtons();
+    }
+    if (computerScore === 3) {
+        winnerText.textContent = "Computer wins the game";
+        disableButtons();
+}
 }
 
-    
+
+
+rock.addEventListener("click", (e) => {
+    let humanChoice = "rock";
+    let computerChoice = getComputerChoice()
+    playRound(humanChoice, computerChoice);
+})
+
+paper.addEventListener("click", (e) => {
+    let humanChoice = "paper";
+    let computerChoice = getComputerChoice()
+    playRound(humanChoice, computerChoice);
+})
+
+scissors.addEventListener("click", (e) => {
+    let humanChoice = "scissors";
+    let computerChoice = getComputerChoice()
+    playRound(humanChoice, computerChoice);
+})
+
+
+function disableButtons() {
+    rock.disabled = true;
+    paper.disabled = true;
+    scissors.disabled = true;
+}
 
 

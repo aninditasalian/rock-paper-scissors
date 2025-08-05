@@ -3,20 +3,26 @@ body {
     font-size:x-large;
     display: flex;
     justify-content: center;
+    font-family: 'Silkscreen', cursive;
+}
+
+h1 {
+    font-weight: 700;
 }
 
 .container {
     background-color: pink;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 10px;
     margin: 10px;
     width: 600px;
+    box-shadow: 5px 5px 10px gray;
 }
 
 .cards div {
     background-color: white;
     padding: 10px;
-    margin: 20px;
+    margin: 20px 40px;
     border-radius: 10px;
 }
 
@@ -43,5 +49,8 @@ button {
     padding: 10px;
     font-size: x-large;
     margin: 10px 20px;
+    font-family: 'Silkscreen', cursive;
+    border: none;
 }
+
 
